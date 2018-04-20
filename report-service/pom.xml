@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<artifactId>report-service</artifactId>
+	<packaging>jar</packaging>
+
+
+	<parent>
+		<groupId>com.guzzh.weather.service</groupId>
+		<artifactId>msa-weather-service</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
+		<relativePath/> <!-- lookup parent from repository -->
+	</parent>
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+		<java.version>1.8</java.version>
+		<!--
+            springboot 默认使用thymeleaf的2.0，即：spring-boot-starter-thymeleaf中包含的是thymeleaf2.X
+            springboot1.5.2+需要使用thymeleaf3.X。手动去配置
+        -->
+		<thymeleaf.version>3.0.2.RELEASE</thymeleaf.version>
+		<thymeleaf-layout-dialect.version>2.0.4</thymeleaf-layout-dialect.version>
+	</properties>
+
+	<dependencies>
+		<!--eureka server -->
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-eureka</artifactId>
+			<version>1.4.4.RELEASE</version>
+		</dependency>
+		<!--spring集成feign-->
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-feign</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-test</artifactId>
+			<scope>test</scope>
+		</dependency>
+		<!--thymeleaf-->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-thymeleaf</artifactId>
+			<version>1.0.2.RELEASE</version>
+		</dependency>
+	</dependencies>
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+			</plugin>
+		</plugins>
+	</build>
+</project>

@@ -1,0 +1,27 @@
+#服务器端口设置
+server:
+  port: 8093 #8093
+#redis地址设置
+spring:
+  redis:
+    host: 10.27.213.239
+    password: PTRkygl@413
+  artemis:
+    port: 6379
+#热部署静态文件 取消缓存
+  thymeleaf:
+    cache: false
+    prefix: classpath:/templates/
+    suffix: .html
+    mode: HTML5
+    encoding: utf-8
+    content-type: text/html
+  application:
+    name: report-server
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8085/eureka/
+
+

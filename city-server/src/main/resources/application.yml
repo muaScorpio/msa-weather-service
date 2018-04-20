@@ -1,0 +1,13 @@
+#服务器端口设置
+server:
+  port: 8094 #8084
+
+spring:
+  application:
+    name: city-server
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8085/eureka/
+
